@@ -7,5 +7,9 @@ class userService {
     async getUser(){
         return (await this.api.get('/user-info')).data
     }
+
+    async logout(){
+        return (await this.api.get('/logout'))
+    }
 }
 export default new userService();
