@@ -5,7 +5,7 @@ class userService {
     }
     
     async getUser(){
-        return await this.api.get('/user-info')
+        return (await this.api.get('/user-info')).data
     }
 }
 export default new userService();
